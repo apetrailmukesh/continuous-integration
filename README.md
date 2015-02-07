@@ -53,6 +53,9 @@ It is based on running Mocha tests with cross-browser SauceLabs integrations on 
 
 [Setting up continious integration deployment with jenkins](http://code.tutsplus.com/tutorials/setting-up-continuous-integration-continuous-deployment-with-jenkins--cms-21511)
 
+[Video](https://www.youtube.com/watch?v=4sANX9AhM8c)
+
+
 # Resources
 
 [Webdriver.io google group](https://groups.google.com/forum/#!forum/webdriverio)
