@@ -8,27 +8,28 @@ It is [Jenkins CI](http://jenkins-ci.org/) running [Mocha](http://mochajs.org/) 
 # Workflow Overview
 
 1. Developer pushes changed code base to `production` branch
-2. Git commit trigger `jenkins` build
-3. If all test pass, than `jenkins` triggers production deployment.
+2. Git commit triggers `jenkins` build script
+3. When build script is successfully executed, `jenkins` runs Mocha tests.  
+4. When all tests pass, than `jenkins` triggers production deployment.
 
 # Project configuration
 
-Project configuration consists of setting up Jenkins server, installing all dependencies it will need for re-creating production server environment, setup ssh keys and git hooks for proper triggering.  
+Project configuration consists of setting up Jenkins remote server, install dependencies it will need for re-creating production server environment and mocha-webdriverio-webdrivercss tests, setup ssh keys for remote accessing and git hooks for triggering Jenkins.  
 
-    * Setup ssh keys 
-    * Install `oh-my-zsh`
-    * Install `git` and `z` plugins for zsh
-    * Install `git`
-    * Install Node.js
-    * Install npm 
-    * Install SeleniumRC
-    * Install Webdriver.io
-    * Install WebdriverCSS
-    * Install dependencies for WebdriverCSS
-    * Install Jenkins
-    * Install plugins for Jenkins
-    * Configure Jenkins
-    * Setup git hooks
+* Setup ssh keys 
+* Install `oh-my-zsh`
+* Install `git` and `z` plugins for zsh
+* Install `git`
+* Install Node.js
+* Install npm 
+* Install SeleniumRC
+* Install Webdriver.io
+* Install WebdriverCSS
+* Install dependencies for WebdriverCSS
+* Install Jenkins
+* Install plugins for Jenkins
+* Configure Jenkins
+* Setup git hooks
 
 # Glossary 
 
