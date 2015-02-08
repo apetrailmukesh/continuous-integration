@@ -1,9 +1,9 @@
-# Testing workflow 
+# Continuous integration 
 
-This project is an example of efficient testing workflow. 
+This project is an example of Continuous Integration. 
 It is based on running Mocha tests with cross-browser SauceLabs integrations on Selenium Server with Webdriver.io javascript bindings, Webdrivercss visual regression tests and configured with Jenkins Continious Integration.
 
-[Attach schema]()
+[CI diagram flow](http://goo.gl/qQlYYy)
 
 # Workflow steps
 
@@ -59,3 +59,5 @@ It is based on running Mocha tests with cross-browser SauceLabs integrations on 
 # Resources
 
 [Webdriver.io google group](https://groups.google.com/forum/#!forum/webdriverio)
+
+[How to configure git commit hook](http://stackoverflow.com/questions/12794568/how-to-configure-git-post-commit-hook)
