@@ -31,6 +31,47 @@ Project configuration consists of setting up Jenkins remote server, install depe
 * Configure Jenkins
 * Setup git hooks
 
+## Creating Web Server 
+
+In this example I'll be using Digital Ocean SSD cloud hosting, but you can use whatever hosting you like. Let's setup __2 GB/2 CPUs__ [droplet](http://monosnap.com/image/oLidA02XDTRd5atmWg8pcXi8NjhdzD) with [node.js on Ubuntu 14.04 image](http://monosnap.com/image/ceBTWoVJd6P7nBmUkN23G2O40F9PT5). We can also add [ssh key](http://monosnap.com/image/Qo6yzQg9oK4FDIftpEMQHiciReZqWS) now, so we won't worry about it later. 
+
+## Setting up `ssh` access 
+
+Once the Droplet was succefully created we need to [reset root password](http://monosnap.com/image/ObqUKlSOoOBiWcNxuS5YNvegYtgNpc) on it. Now let's pool up `iTerm` or `Terminal` and login in our droplet. 
+
+    ssh root@droplet.ip.number
+
+After a few seconds you will be prompted for a password, type it in and we are in our droplet shell.
+
+__Note:__ 
+
+When a domain has been moved from one server to another an issue with SSH logins may occur. The warning dialog that most SSH programs give looks something like this:
+
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+    Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+    It is also possible that the RSA host key has just been changed.
+    The fingerprint for the RSA key sent by the remote host is
+    06:ea:f1:f8:db:75:5c:0c:af:15:d7:99:2d:ef:08:2a.
+    Please contact your system administrator.
+    Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+    Offending key in /home/user/.ssh/known_hosts:4
+    RSA host key for domain.com has changed and you have requested strict checking.
+    Host key verification failed.
+
+The SSH program will print this message and often exit, prohibiting the user from connecting to the suspicious site. This problem arises when a site has changed servers, and the new server RSA key which is transmitted when authenticating is different from the old server.
+
+
+
+
+
+
+
+
+
+
 # Glossary 
 
 * [Selenium RC(Remote Control)](http://www.seleniumhq.org/projects/remote-control/) - is an API accessible from multiple languages. Rather than recording tests, you write programs that call into the API to control the browser
