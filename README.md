@@ -63,6 +63,9 @@ When a domain has been moved from one server to another an issue with SSH logins
 
 The SSH program will print this message and often exit, prohibiting the user from connecting to the suspicious site. This problem arises when a site has changed servers, and the new server RSA key which is transmitted when authenticating is different from the old server.
 
+## Installing and configuring `oh-my-zsh`
+
+[Installing oh-my-zsh on Ubuntu](https://gist.github.com/tsabat/1498393)
 
 
 
