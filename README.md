@@ -50,7 +50,9 @@ Project configuration consists of setting up Jenkins remote server, install depe
 
 [Setting up continious integration deployment with jenkins](http://code.tutsplus.com/tutorials/setting-up-continuous-integration-continuous-deployment-with-jenkins--cms-21511)
 
-[Video](https://www.youtube.com/watch?v=4sANX9AhM8c)
+[Video Tutorial on Jenkins](https://www.youtube.com/watch?v=4sANX9AhM8c)
+
+[How to install and use Jenkins](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-jenkins-on-ubuntu-12-04)
 
 
 # Resources
