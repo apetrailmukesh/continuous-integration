@@ -14,23 +14,6 @@ It is [Jenkins CI](http://jenkins-ci.org/) running [Mocha](http://mochajs.org/) 
 
 # Project configuration
 
-Project configuration consists of setting up Jenkins remote server, install dependencies it will need for re-creating production server environment and mocha-webdriverio-webdrivercss tests, setup ssh keys for remote accessing and git hooks for triggering Jenkins.  
-
-* Setup ssh keys 
-* Install `oh-my-zsh`
-* Install `git` and `z` plugins for zsh
-* Install `git`
-* Install Node.js
-* Install npm 
-* Install SeleniumRC
-* Install Webdriver.io
-* Install WebdriverCSS
-* Install dependencies for WebdriverCSS
-* Install Jenkins
-* Install plugins for Jenkins
-* Configure Jenkins
-* Setup git hooks
-
 ## Creating Web Server 
 
 In this example I'll be using Digital Ocean SSD cloud hosting, but you can use whatever hosting you like. Let's setup __2 GB/2 CPUs__ [droplet](http://monosnap.com/image/oLidA02XDTRd5atmWg8pcXi8NjhdzD) with [node.js on Ubuntu 14.04 image](http://monosnap.com/image/ceBTWoVJd6P7nBmUkN23G2O40F9PT5). We can also add [ssh key](http://monosnap.com/image/Qo6yzQg9oK4FDIftpEMQHiciReZqWS) now, so we won't worry about it later. 
@@ -41,7 +24,7 @@ Once the Droplet was succefully created we need to [reset root password](http://
 
     ssh root@droplet.ip.number
 
-After a few seconds you will be prompted for a password, type it in and we are in our droplet shell.
+After a few seconds you will be prompted for a password, type it in and you are in Jenkins Server Shell.
 
 __Note:__ 
 
@@ -65,13 +48,47 @@ The SSH program will print this message and often exit, prohibiting the user fro
 
 ## Installing and configuring `oh-my-zsh`
 
-[Installing oh-my-zsh on Ubuntu](https://gist.github.com/tsabat/1498393)
+
+### Installing `zsh`
+
+    // Update package manager 
+    apt-get update 
+    // Install pre requirements
+    apt-get install zsh && apt-get install git-core
+    // Install zsh
+    wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+    // Change shell to zsh
+    chsh -s `which zsh`
+    // Restart droplet 
+    sudo shutdown -r 0
+
+Or a nice one-liner:
+
+    ap-get update && upt-get install zsh && apt-get install git-core &&  wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh` && sudo shutdown -r 0
+
+Source: [Installing `oh-my-zsh` on Ubuntu](https://gist.github.com/tsabat/1498393)
 
 
+### Configuring `oh-my-zsh`
 
+`oh-my-zsh` has a great variety of awesome themes, you can choose the one you like here - [http://zshthem.es/all/](http://zshthem.es/all/). I prefer `fino-time`, because it has useful output with a server name you are in, so you won't get lost in your ssh tonnels. 
 
+Install `nano` text editor or any other, because we are going to edit `~.zshrc`
 
+    apt-get install nano 
 
+Open `.zshrc` file:
+
+    nano ~/.zshrc
+
+And change `ZSH_THEME` on the one you like: 
+
+    ZSH_THEME="fino-time"
+
+Than hit <kbd>Ctrl</kbd>+<kbd>O</kbd> and <kbd>Enter</kbd>. 
+Restart your droplet for `zsh` to apply the changes: 
+
+    sudo shutdown -r 0
 
 
 
