@@ -26,6 +26,18 @@ Once the Droplet was succefully created we need to [reset root password](http://
 
 After a few seconds you will be prompted for a password, type it in and you are in Jenkins Server Shell.
 
+Now we want to restrict root login. 
+
+    nano /etc/ssh/sshd_config
+
+we need to find the line that looks like this:
+
+    PermitRootLogin yes
+
+Here, we have the option to disable root login through SSH. This is generally a more secure setting since we can now access our server through our normal user account and escalate privileges when necessary.
+
+    PermitRootLogin no
+
 __Note:__ 
 
 When a domain has been moved from one server to another an issue with SSH logins may occur. The warning dialog that most SSH programs give looks something like this:
@@ -46,6 +58,8 @@ When a domain has been moved from one server to another an issue with SSH logins
 
 The SSH program will print this message and often exit, prohibiting the user from connecting to the suspicious site. This problem arises when a site has changed servers, and the new server RSA key which is transmitted when authenticating is different from the old server.
 
+
+
 ## Installing and configuring `oh-my-zsh`
 
 
@@ -64,7 +78,7 @@ The SSH program will print this message and often exit, prohibiting the user fro
 
 Or a nice one-liner:
 
-    ap-get update && upt-get install zsh && apt-get install git-core &&  wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh` && sudo shutdown -r 0
+    apt-get update && apt-get install zsh && apt-get install git-core &&  wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh` && sudo shutdown -r 0
 
 Source: [Installing `oh-my-zsh` on Ubuntu](https://gist.github.com/tsabat/1498393)
 
@@ -86,6 +100,7 @@ And change `ZSH_THEME` on the one you like:
     ZSH_THEME="fino-time"
 
 Than hit <kbd>Ctrl</kbd>+<kbd>O</kbd> and <kbd>Enter</kbd>. 
+
 Restart your droplet for `zsh` to apply the changes: 
 
     sudo shutdown -r 0
