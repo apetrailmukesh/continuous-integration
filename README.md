@@ -100,8 +100,120 @@ Install git
 
     apt-get install git 
 
+Setup `git` global configuration. 
 
+Create `~/.gitconfig` file and copy this into it:
 
+    [user]
+        name = Your Name
+        email = your-mail@mail.com
+    [core]
+    excludesfile = .gitignore_global
+    editor = nano
+    [color]
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
+        ui = auto
+    [color "branch"]
+        current = green bold
+        local = green
+        remote = red bold
+    [color "sh"]
+        branch = yellow
+    [color "diff"]
+        meta = blue bold
+        frag = magenta bold
+        old = red
+        new = green
+    [color "status"]
+        added = green
+        changed = blue bold
+        untracked = red
+    [alias]
+        st = status -sb
+        sb = status -sb
+        aa = add -A
+        br = branch
+        ci = commit
+        co = checkout
+        df = diff
+        ui = update-index
+        unchange = update-index --assume-unchanged
+        change = update-index --no-assume-unchanged
+        dc = diff --cached
+        last = log -1 HEAD
+        lg = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lg10 = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10
+        lg20 = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -20
+        lgf = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -40
+        lr = log --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --reverse
+        lr10 = log --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10 --reverse
+        lr20 = log --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10 --reverse
+        tree = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lgq = !git --no-pager log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -20
+        today = diff --stat @{12am}..HEAD
+        total = !git log --pretty=oneline | wc -l
+        oh = !git push origin && git push heroku
+        tl = tag -l -n100
+        rehead = reset HEAD
+        reci = reset --soft HEAD^
+        back = !git reci && git rehead
+        rehoh = reset --hard ORIG_HEAD
+        # http://blog.blindgaenger.net/advanced_git_aliases.html
+        ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+        r  = !git ls-files -z --deleted | xargs -0 git rm
+        x  = commit -m
+        xa = commit -a -m
+        a  = add
+    [github]
+        user = YourUsename
+    [filter "media"]
+        required = true
+        clean = git media clean %f
+        smudge = git media smudge %f
+    [fetch]
+        prune = true
+
+Create `~/.gitignore_global` file and copy this into it:
+
+    # Compiled source 
+    ####################
+    *.com
+    *.class
+    *.dll
+    *.exe
+    *.o
+    *.so
+    # Packages #
+    ############
+    # it's better to unpack these files and commit the raw source
+    # git has its own built in compression methods
+    *.7z
+    *.dmg
+    *.gz
+    *.iso
+    *.jar
+    *.rar
+    *.tar
+    *.zip
+    # Logs and databases #
+    ######################
+    *.log
+    *.sql
+    *.sqlite
+    # OS generated files #
+    ######################
+    .DS_Store
+    .DS_Store?
+    ._*
+    .Spotlight-V100
+    .Trashes
+    ehthumbs.db
+    Thumbs.db
+    # Random VM Files/Folders
+    bad-proxies.txt
 
 # Glossary 
 
