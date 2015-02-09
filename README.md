@@ -215,6 +215,21 @@ Create `~/.gitignore_global` file and copy this into it:
     # Random VM Files/Folders
     bad-proxies.txt
 
+# Installing Jenkins 
+
+You need to have a `JDK` and `JRE` installed before installing `Jenkins`. 
+
+This will install the Java Runtime Environment (JRE):
+
+    sudo apt-get install default-jre
+
+Install Java Development Kit (JDK), which is needed to compile `Java` applications: 
+
+    sudo apt-get install default-jdk
+
+
+
+
 # Glossary 
 
 * [Selenium RC(Remote Control)](http://www.seleniumhq.org/projects/remote-control/) - is an API accessible from multiple languages. Rather than recording tests, you write programs that call into the API to control the browser
