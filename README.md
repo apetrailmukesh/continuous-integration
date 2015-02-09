@@ -16,27 +16,16 @@ It is [Jenkins CI](http://jenkins-ci.org/) running [Mocha](http://mochajs.org/) 
 
 ## Creating Web Server 
 
-In this example I'll be using Digital Ocean SSD cloud hosting, but you can use whatever hosting you like. Let's setup __2 GB/2 CPUs__ [droplet](http://monosnap.com/image/oLidA02XDTRd5atmWg8pcXi8NjhdzD) with [node.js on Ubuntu 14.04 image](http://monosnap.com/image/ceBTWoVJd6P7nBmUkN23G2O40F9PT5). We can also add [ssh key](http://monosnap.com/image/Qo6yzQg9oK4FDIftpEMQHiciReZqWS) now, so we won't worry about it later. 
+In this example I'll be using Digital Ocean SSD cloud hosting, but you can use whatever hosting you like. Let's setup __2 GB/2 CPUs__ [droplet](http://monosnap.com/image/oLidA02XDTRd5atmWg8pcXi8NjhdzD) with [node.js on Ubuntu 14.04 image](http://monosnap.com/image/ceBTWoVJd6P7nBmUkN23G2O40F9PT5). 
 
 ## Setting up `ssh` access 
 
-Once the Droplet was succefully created we need to [reset root password](http://monosnap.com/image/ObqUKlSOoOBiWcNxuS5YNvegYtgNpc) on it. Now let's pool up `iTerm` or `Terminal` and login in our droplet. 
+Once the Droplet was succefully created we need to [reset root password](http://monosnap.com/image/ObqUKlSOoOBiWcNxuS5YNvegYtgNpc). Copy the password from the recovery email and pool up `iTerm` or `Terminal`.
+To add a SSH key after the creation of the droplet, you need to add the contents of the public key to the file `~/.ssh/authorized_keys`. You can do that by running this on your local computer: 
 
-    ssh root@droplet.ip.number
+    cat ~/.ssh/id_rsa.pub | ssh root@your.ip.address "cat >> ~/.ssh/authorized_keys"
 
-After a few seconds you will be prompted for a password, type it in and you are in Jenkins Server Shell.
-
-Now we want to restrict root login. 
-
-    nano /etc/ssh/sshd_config
-
-we need to find the line that looks like this:
-
-    PermitRootLogin yes
-
-Here, we have the option to disable root login through SSH. This is generally a more secure setting since we can now access our server through our normal user account and escalate privileges when necessary.
-
-    PermitRootLogin no
+After a few seconds you will be prompted for a password, type it in and BOOM, the next time ssh, you won't be prompted for a password! 
 
 __Note:__ 
 
@@ -58,10 +47,7 @@ When a domain has been moved from one server to another an issue with SSH logins
 
 The SSH program will print this message and often exit, prohibiting the user from connecting to the suspicious site. This problem arises when a site has changed servers, and the new server RSA key which is transmitted when authenticating is different from the old server.
 
-
-
 ## Installing and configuring `oh-my-zsh`
-
 
 ### Installing `zsh`
 
@@ -82,7 +68,6 @@ Or a nice one-liner:
 
 Source: [Installing `oh-my-zsh` on Ubuntu](https://gist.github.com/tsabat/1498393)
 
-
 ### Configuring `oh-my-zsh`
 
 `oh-my-zsh` has a great variety of awesome themes, you can choose the one you like here - [http://zshthem.es/all/](http://zshthem.es/all/). I prefer `fino-time`, because it has useful output with a server name you are in, so you won't get lost in your ssh tonnels. 
@@ -99,11 +84,22 @@ And change `ZSH_THEME` on the one you like:
 
     ZSH_THEME="fino-time"
 
+and let's also add some usefull plugins we might need later: 
+
+    plugins=(git z last-working-dir history-substring-search history extract zsh-syntax-highlighting)
+
 Than hit <kbd>Ctrl</kbd>+<kbd>O</kbd> and <kbd>Enter</kbd>. 
 
 Restart your droplet for `zsh` to apply the changes: 
 
     sudo shutdown -r 0
+
+## Installing and configuring `git`
+
+Install git 
+
+    apt-get install git 
+
 
 
 
