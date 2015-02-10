@@ -266,26 +266,35 @@ Test if `selenium-standalone` is working by typing:
 
 [How to install PhantomJS on Ubuntu](https://gist.github.com/julionc/7476620)
 
-Install the development packages of the following tools and libraries:` GNU C++ compiler`, `bison`, `flex`, `gperf`, `Perl`, `Ruby`, `SQLite`, `FreeType`, `FontConfig`, `OpenSSL`, and `ICU`. 
+First, install the latest system software.
 
-    sudo apt-get install g++ flex bison gperf ruby perl \
-      libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
-      libpng-dev libjpeg-dev
+    sudo apt-get install build-essential chrpath libssl-dev libxft-dev
 
-And press <kbd>Enter</kbd>
+Install these packages needed by `PhantomJS` to work correctly.
 
-It is recommend also to install `ttf-mscorefonts-installer` package.
+    sudo apt-get install libfreetype6 libfreetype6-dev
+    sudo apt-get install libfontconfig1 libfontconfig1-dev
 
-Use <kbd>Tab</kbd> and <kbd>Enter</kbd> to navigate.
+Get it from the PhantomJS website.
 
-Browse to `/home`, `mkdir` called `user` and `cd` into it:
+    cd ~
+    export PHANTOM_JS="phantomjs-1.9.7-linux-x86_64"
+    wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
 
-    git clone git://github.com/ariya/phantomjs.git
-    cd phantomjs
-    git checkout 2.0
-    ./build.sh
+Once downloaded, move compress file to` /usr/local/share/`, and create symlinks:
 
-__Note__: build.sh by default will launch parallel compile jobs depending on the available CPU cores, e.g. 4 jobs on a modern hyperthreaded dual-core processor. If necessary, e.g. when building on a virtual machine/server or other limited environment, reduce the jobs by passing a number, e.g `./build.sh --jobs 1` to set only one compile job at a time.
+    sudo mv $PHANTOM_JS.tar.bz2 /usr/local/share/
+    cd /usr/local/share/
+    sudo tar xvjf $PHANTOM_JS.tar.bz2
+    sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/share/phantomjs
+    sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin/phantomjs
+    sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/bin/phantomjs
+
+Now, It (should) have `PhantomJS` properly on your system.
+
+    phantomjs --version
+    // 1.9.7
+
 
 ### Install [`webdriverCSS`](https://github.com/webdriverio/webdrivercss)
 
