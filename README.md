@@ -238,7 +238,22 @@ Reboot Jenkins Server and you are able to open `digital.ocean.ip:8080`
 
 # Configuring Jenkins
 
+# Install testing dependencies 
 
+Install `webdriver.io`
+
+    npm install webdriverio
+
+Install `selenium-standalone` globally
+
+    npm install selenium-standalone@latest -g
+    selenium-standalone install
+
+Test if `selenium-standalone` is working by typing: 
+
+    selenium-standalone start 
+
+![selenium-standalone start](http://monosnap.com/image/KOyKbavpsb4VLJr8n6ETBxWVOkZQkj)
 
 # Glossary 
 
