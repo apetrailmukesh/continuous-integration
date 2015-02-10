@@ -244,7 +244,7 @@ Install `webdriver.io`
 
     npm install webdriverio
 
-Install `selenium-standalone` globally
+Install [`selenium-standalone`](https://github.com/vvo/selenium-standalone) globally
 
     npm install selenium-standalone@latest -g
     selenium-standalone install
@@ -253,7 +253,28 @@ Test if `selenium-standalone` is working by typing:
 
     selenium-standalone start 
 
-![selenium-standalone start](http://monosnap.com/image/KOyKbavpsb4VLJr8n6ETBxWVOkZQkj)
+[selenium-standalone start screenshot](http://monosnap.com/image/KOyKbavpsb4VLJr8n6ETBxWVOkZQkj)
+
+Install [`phantomjs`](http://phantomjs.org/)
+
+Install the development packages of the following tools and libraries:` GNU C++ compiler`, `bison`, `flex`, `gperf`, `Perl`, `Ruby`, `SQLite`, `FreeType`, `FontConfig`, `OpenSSL`, and `ICU`. 
+
+    sudo apt-get install g++ flex bison gperf ruby perl \
+      libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
+      libpng-dev libjpeg-dev
+
+And press <kbd>Enter</kbd>
+
+It is recommend also to install `ttf-mscorefonts-installer` package.
+
+Use <kbd>Tab</kbd> and <kbd>Enter</kbd> to navigate.
+
+Browse to `/home`, `mkdir` called `user` and `cd` into it:
+
+    git clone git://github.com/ariya/phantomjs.git
+    cd phantomjs
+    git checkout 2.0
+    ./build.sh
 
 # Glossary 
 
