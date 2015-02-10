@@ -240,11 +240,11 @@ Reboot Jenkins Server and you are able to open `digital.ocean.ip:8080`
 
 # Install testing dependencies 
 
-Install `webdriver.io`
+## Install `webdriver.io`
 
     npm install webdriverio
 
-Install [`selenium-standalone`](https://github.com/vvo/selenium-standalone) globally
+## Install [`selenium-standalone`](https://github.com/vvo/selenium-standalone) globally
 
     npm install selenium-standalone@latest -g
     selenium-standalone install
@@ -255,7 +255,7 @@ Test if `selenium-standalone` is working by typing:
 
 [selenium-standalone start screenshot](http://monosnap.com/image/KOyKbavpsb4VLJr8n6ETBxWVOkZQkj)
 
-Install [`phantomjs`](http://phantomjs.org/)
+## Install [`phantomjs`](http://phantomjs.org/)
 
 Install the development packages of the following tools and libraries:` GNU C++ compiler`, `bison`, `flex`, `gperf`, `Perl`, `Ruby`, `SQLite`, `FreeType`, `FontConfig`, `OpenSSL`, and `ICU`. 
 
@@ -275,6 +275,13 @@ Browse to `/home`, `mkdir` called `user` and `cd` into it:
     cd phantomjs
     git checkout 2.0
     ./build.sh
+
+## Install [`webdriverCSS`](https://github.com/webdriverio/webdrivercss)
+
+WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for comparing and analyzing screenshots with node-resemble. To install this package you'll need to have GraphicsMagick, Cairo and of course Node.JS, NPM and Python preinstalled on your system.
+
+    sudo apt-get install graphicsmagick
+    sudo apt-get install libcairo2-dev
 
 # Glossary 
 
