@@ -264,6 +264,8 @@ Test if `selenium-standalone` is working by typing:
 
 ### Install [`phantomjs`](http://phantomjs.org/)
 
+[How to install PhantomJS on Ubuntu](https://gist.github.com/julionc/7476620)
+
 Install the development packages of the following tools and libraries:` GNU C++ compiler`, `bison`, `flex`, `gperf`, `Perl`, `Ruby`, `SQLite`, `FreeType`, `FontConfig`, `OpenSSL`, and `ICU`. 
 
     sudo apt-get install g++ flex bison gperf ruby perl \
@@ -305,6 +307,8 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 * Copy `.gitconfig` and `.gitignore_global`
 
 # Create Springloops project for Web Server 
+
+[Screenshot](http://monosnap.com/image/4rowF5vGqLuHmSccc3KeoB7P7o5Uo2)
 
 // @content
 //
