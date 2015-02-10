@@ -290,6 +290,10 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
     sudo apt-get install graphicsmagick
     sudo apt-get install libcairo2-dev
 
+### Install [`Mocha`](http://mochajs.org/)
+
+    npm install -g mocha
+
 # Setup Web Server 
 
 * Create Digital Ocean Droplet 
@@ -300,7 +304,9 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 
 # Create Springloops project for Web Server 
 
-
+// @content
+//
+//
 
 # Glossary 
 
