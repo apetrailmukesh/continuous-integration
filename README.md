@@ -283,6 +283,8 @@ Browse to `/home`, `mkdir` called `user` and `cd` into it:
     git checkout 2.0
     ./build.sh
 
+__Note__: build.sh by default will launch parallel compile jobs depending on the available CPU cores, e.g. 4 jobs on a modern hyperthreaded dual-core processor. If necessary, e.g. when building on a virtual machine/server or other limited environment, reduce the jobs by passing a number, e.g `./build.sh --jobs 1` to set only one compile job at a time.
+
 ### Install [`webdriverCSS`](https://github.com/webdriverio/webdrivercss)
 
 WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for comparing and analyzing screenshots with node-resemble. To install this package you'll need to have GraphicsMagick, Cairo and of course Node.JS, NPM and Python preinstalled on your system.
