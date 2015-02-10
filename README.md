@@ -311,6 +311,10 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 
     npm install gulp -g
 
+### Install ['Browserify'](http://browserify.org/)
+
+    npm install browserify -g
+
 # Setup Web Server 
 
 * Create Digital Ocean Droplet 
