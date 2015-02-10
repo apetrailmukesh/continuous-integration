@@ -295,6 +295,10 @@ Now, It (should) have `PhantomJS` properly on your system.
     phantomjs --version
     // 1.9.7
 
+__Note__: WebdriverIO listens on port 4444, so you should start `phantomjs` like:
+
+    phantomjs --webdriver=4444
+
 
 ### Install [`webdriverCSS`](https://github.com/webdriverio/webdrivercss)
 
@@ -314,6 +318,11 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 ### Install ['Browserify'](http://browserify.org/)
 
     npm install browserify -g
+
+### Install firefox browser 
+
+    apt-get install firefox 
+
 
 # Setup Web Server 
 
