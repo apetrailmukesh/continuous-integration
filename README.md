@@ -245,7 +245,7 @@ Install plugins:
 * 
 
 
-# Install testing dependencies 
+# Install test dependencies 
 
 ### Install `webdriver.io`
 
@@ -305,7 +305,11 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 
 ### Install [`Mocha`](http://mochajs.org/)
 
-    npm install -g mocha
+    npm install mocha -g 
+
+### Install ['Gulp'](http://gulpjs.com)
+
+    npm install gulp -g
 
 # Setup Web Server 
 
