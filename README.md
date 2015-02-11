@@ -215,6 +215,21 @@ Create `~/.gitignore_global` file and copy this into it:
     # Random VM Files/Folders
     bad-proxies.txt
 
+# Configure Jenkins Server 
+
+Create new linux user, by typing:
+
+    adduser app
+
+You'll need to provide a password (a different strong password, stored securely), and then it'll ask a series of optional questions.
+
+We want to switch to our `app` user, but before we logout, we need to grant our new user `sudo` privileges so it'll have the ability to perform administrative actions:
+
+    usermod -a -G sudo app
+
+
+
+
 # Installing Jenkins 
 
 You need to have a `JDK` and `JRE` installed before installing `Jenkins`. 
