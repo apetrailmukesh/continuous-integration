@@ -363,6 +363,10 @@ Copy file from Jenkins server to your local machine:
 
     scp root@droplet.ip.address:/path/to/file path/on/local-machine
 
+Restart `jenkins` from cli: 
+
+    sudo /etc/init.d/jenkins restart
+
 # Glossary 
 
 * [Selenium RC(Remote Control)](http://www.seleniumhq.org/projects/remote-control/) - is an API accessible from multiple languages. Rather than recording tests, you write programs that call into the API to control the browser
