@@ -306,6 +306,8 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 
     sudo apt-get install graphicsmagick
     sudo apt-get install libcairo2-dev
+    // install WebdriverCSS via NPM as usual
+    npm install webdrivercss
 
 ### Install [`Mocha`](http://mochajs.org/)
 
