@@ -242,14 +242,14 @@ Install plugins:
 
 * [Git Client Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Client+Plugin)
 * [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
-* 
+* [Secure Jenkins](http://www.vogella.com/tutorials/Jenkins/article.html#jenkinsconfiguration_user), [screenshot](http://monosnap.com/image/N4Zrcvvuv54v00QCd3nUiMz47RYBUT)
 
 
 # Install test dependencies 
 
 ### Install `webdriver.io`
 
-    npm install webdriverio
+    npm install webdriverio -g
 
 ### Install [`selenium-standalone`](https://github.com/vvo/selenium-standalone) globally
 
@@ -339,6 +339,12 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 // @content
 //
 //
+
+# Misc
+
+Copy file from Jenkins server to your local machine:
+
+    scp root@droplet.ip.address:/path/to/file path/on/local-machine
 
 # Glossary 
 
