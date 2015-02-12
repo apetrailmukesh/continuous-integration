@@ -253,12 +253,9 @@ Reboot Jenkins Server and you are able to open `digital.ocean.ip:8080`
 
 # Configuring Jenkins
 
-Install plugins: 
-
 * [Git Client Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Client+Plugin)
 * [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
 * [Secure Jenkins](http://www.vogella.com/tutorials/Jenkins/article.html#jenkinsconfiguration_user), [screenshot](http://monosnap.com/image/N4Zrcvvuv54v00QCd3nUiMz47RYBUT)
-
 
 # Install test dependencies 
 
@@ -366,6 +363,16 @@ Copy file from Jenkins server to your local machine:
 Restart `jenkins` from cli: 
 
     sudo /etc/init.d/jenkins restart
+
+Unistalling `Jenkins`: 
+
+[Unistall `jenkins`](http://installion.co.uk/ubuntu/saucy/universe/j/jenkins/uninstall/index.html)
+
+sudo apt-get remove jenkins
+sudo apt-get remove --auto-remove jenkins
+sudo apt-get purge jenkins
+sudo apt-get purge --auto-remove jenkins
+
 
 # Glossary 
 
