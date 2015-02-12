@@ -369,6 +369,13 @@ WebdriverCSS uses GraphicsMagick for image processing as well as node-canvas for
 * Install `git`
 * Copy `.gitconfig` and `.gitignore_global`
 
+Create a new user: 
+
+    adduser jenkins-web-server
+    usermod -a -G sudo jenkins-web-server
+
+It will prompt you for a new `Unix` password
+
 # Create Springloops project for Web Server 
 
 [Screenshot](http://monosnap.com/image/4rowF5vGqLuHmSccc3KeoB7P7o5Uo2)
@@ -395,6 +402,8 @@ sudo apt-get remove jenkins
 sudo apt-get remove --auto-remove jenkins
 sudo apt-get purge jenkins
 sudo apt-get purge --auto-remove jenkins
+
+[How to run jenkins as a different user](http://stackoverflow.com/questions/6692330/how-to-run-jenkins-as-a-different-user)
 
 
 # Glossary 
