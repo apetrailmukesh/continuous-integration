@@ -251,6 +251,29 @@ Install `Jenkins`:
 
 Reboot Jenkins Server and you are able to open `digital.ocean.ip:8080`
 
+# Configuring `ssh` keys for Jenkins Server 
+
+[generating ssh keys](https://help.github.com/articles/generating-ssh-keys/)
+
+Create a seperate `git` account and `ssh` into `jenkins` server 
+
+Generate new `ssh` key
+
+    ssh-keygen -t rsa -C "your_email@example.com"
+
+Next, you'll be asked to enter a passphrase. Then add your new key to the ssh-agent:
+
+    # start the ssh-agent in the background
+    eval "$(ssh-agent -s)"
+    # Agent pid 59566
+    ssh-add ~/.ssh/id_rsa
+
+Copy your public key `id_rsa.pub` to your new `git` account. 
+
+Git clone the repo, which will be in continiuos integration and authentificate host. 
+
+
+
 # Configuring Jenkins
 
 * [Git Client Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Client+Plugin)
