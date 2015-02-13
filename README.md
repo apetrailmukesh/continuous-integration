@@ -251,6 +251,8 @@ Install `Jenkins`:
 
 Reboot Jenkins Server and you are able to open `digital.ocean.ip:8080`
 
+[Alternative ]
+
 # Configuring `ssh` keys for Jenkins Server 
 
 [generating ssh keys](https://help.github.com/articles/generating-ssh-keys/)
@@ -271,6 +273,7 @@ Next, you'll be asked to enter a passphrase. Then add your new key to the ssh-ag
 Copy your public key `id_rsa.pub` to your new `git` account. 
 
 Git clone the repo, which will be in continiuos integration and authentificate host. 
+
 
 
 
@@ -405,6 +408,12 @@ sudo apt-get purge --auto-remove jenkins
 
 [How to run jenkins as a different user](http://stackoverflow.com/questions/6692330/how-to-run-jenkins-as-a-different-user)
 
+Springloops.io `ssh` configs
+
+1. Go to people 
+2. Find User 
+3. Profile details
+4. change ssh key
 
 # Glossary 
 
