@@ -219,13 +219,13 @@ Create `~/.gitignore_global` file and copy this into it:
 
 Create new linux user, by typing:
 
-    adduser app
+    adduser jenkins
 
 You'll need to provide a password (a different strong password, stored securely), and then it'll ask a series of optional questions.
 
-We want to switch to our `app` user, but before we logout, we need to grant our new user `sudo` privileges so it'll have the ability to perform administrative actions:
+We want to switch to our `jenkins` user, but before we logout, we need to grant our new user `sudo` privileges so it'll have the ability to perform administrative actions:
 
-    usermod -a -G sudo app
+    usermod -a -G sudo jenkins
 
 
 
@@ -251,7 +251,7 @@ Install `Jenkins`:
 
 Reboot Jenkins Server and you are able to open `digital.ocean.ip:8080`
 
-[Alternative ]
+[Alternative](https://www.rosehosting.com/blog/install-jenkins-on-an-ubuntu-14-04-vps/)
 
 # Configuring `ssh` keys for Jenkins Server 
 
