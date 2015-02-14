@@ -29,8 +29,8 @@
 
     nano ~/.gitconfig 
     # add in file
-    name = Jenkins
-    email = jenkins@referralsolutionsgroup.com
+    name = Your Name
+    email = your@mail.com
     editor = nano
 
 12) Create new `linux` user
@@ -71,4 +71,22 @@
 
     apt-get install jenkins
 
-22) 
+22) Go to `~/.zshrc`
+
+    cd ~/.zshrc
+
+23) Generate new `ssh` keys
+
+    ssh-keygen -t rsa -C "your@mail.com"
+
+24) Add your `ssh` public key to your [springloops.io](sringloops.com) account
+
+    cat id_rsa.pub
+
+25) Add springloops to `~/.ssh/known_hosts`. 
+    There is probably a better way to do it ...
+
+    git clone ssh://sls@slsapp.com:1234/name/project.git
+
+26) 
+
