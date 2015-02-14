@@ -164,6 +164,16 @@ Add __Authentication Token__
 
 `http://doplet.ip:8080/job/job-name/build?token=TOKEN`
 
+#### 36) Add `pre-push` hook to git `~/production/.git/hooks`
+
+    nano  ~/produciton/.git/hooks
+    # Add these lines
+    echo "pre-push started"
+    echo "http://droplet.ip:8080"
+    curl -X POST http://droplet.ip:8080/job/production/build?token=TOKEN_NAME
+    echo "pre-push finished"
+
+
 
 
 
