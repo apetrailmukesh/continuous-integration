@@ -136,7 +136,24 @@ Uncheck __Allow users to sign up__
 
 __SAVE__
 
-#### 33) 
+#### 33) Create new job
+
+Add __item name__ and check __Freestyle project__
+
+#### 34) Configure job
+
+Check `git`
+
+Add repository URL in the same format as you will clone the repo
+
+For Credentials add __Private__ `ssh key` which was previously generated for springloops.io
+
+__SAVE__
+
+Test it __Build Now__
+
+#### 35) 
+
 
 
 
