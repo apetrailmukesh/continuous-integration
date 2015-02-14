@@ -118,17 +118,26 @@ Go to __Manage Jenkins__ => __Configure Global Security__
 
 Check __Enable security__
 
-Check __Matrix-based security__
+Check __Jenkins’ own user database__
 
-Check __Overall__ => __Read Only__ for _Anonymous_
+Check __Allow users to sign up__
 
-Add _User_
+Check __Logged-in users can do anything__
 
-Check all marks for _New user_
+__SAVE__
 
+#### 31) Sign up for `jenkins` account
 
+#### 32) Disable user's sign up
 
-31)
+Go to __Manage Jenkins__ => __Configure Global Security__
+
+Uncheck __Allow users to sign up__
+
+__SAVE__
+
+#### 33) 
+
 
 
 
