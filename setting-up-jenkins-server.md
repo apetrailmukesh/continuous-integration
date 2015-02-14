@@ -152,7 +152,18 @@ __SAVE__
 
 Test it __Build Now__
 
-#### 35) 
+#### 35) Add remote triggered builds 
+
+Go to our job
+
+__Configure__
+
+Check __Trigger builds remotely (e.g., from scripts)__
+
+Add __Authentication Token__
+
+`http://doplet.ip:8080/job/job-name/build?token=TOKEN`
+
 
 
 
