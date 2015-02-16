@@ -300,6 +300,8 @@ Test if `selenium-standalone` is working by typing:
 
 [selenium-standalone start screenshot](http://monosnap.com/image/KOyKbavpsb4VLJr8n6ETBxWVOkZQkj)
 
+![Selenium Standalone Server](img/selenium-standalone-server.png)
+
 ### Install [`phantomjs`](http://phantomjs.org/)
 
 [How to install PhantomJS on Ubuntu](https://gist.github.com/julionc/7476620)
