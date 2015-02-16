@@ -184,5 +184,40 @@ Add __Authentication Token__
 
 ![Selenium Standalone Server](img/selenium-standalone-server.png)
 
-#### 39) 
+#### 39) Install [`phantomjs`](http://phantomjs.org/)
+
+Install the latest system software.
+
+    sudo apt-get install build-essential chrpath libssl-dev libxft-dev
+
+Install these packages needed by `PhantomJS` to work correctly.
+
+    sudo apt-get install libfreetype6 libfreetype6-dev
+    sudo apt-get install libfontconfig1 libfontconfig1-dev
+
+Get it from the PhantomJS website.
+
+    cd ~
+    export PHANTOM_JS="phantomjs-1.9.7-linux-x86_64"
+    wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+
+Once downloaded, move compress file to`/usr/local/share/`, and create symlinks:
+
+    sudo mv $PHANTOM_JS.tar.bz2 /usr/local/share/
+    cd /usr/local/share/
+    sudo tar xvjf $PHANTOM_JS.tar.bz2
+    sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/share/phantomjs
+    sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin/phantomjs
+    sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/bin/phantomjs
+
+Now, It (should) have `PhantomJS` properly on your system.
+
+    phantomjs --version
+    // 1.9.7
+
+![Run Selenium and webdriver-phantomjs](img/selenium-webdriver-phantomjs.png)
+
+    selenium-standalone start
+    # WebdriverIO listens on port 4444
+    phantomjs --webdriver=4444
 
