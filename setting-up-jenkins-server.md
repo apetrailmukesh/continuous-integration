@@ -173,10 +173,16 @@ Add __Authentication Token__
     curl -X POST http://droplet.ip:8080/job/production/build?token=TOKEN_NAME
     echo "pre-push finished"
 
+#### 37) Install `webdriver.io`
 
+    npm install webdriverio -g
 
+#### 38) Install [`selenium-standalone`](https://github.com/vvo/selenium-standalone) globally
 
+    npm install selenium-standalone@latest -g
+    selenium-standalone install
 
+![Selenium Standalone Server](img/selenium-standalone-server.png)
 
-
+#### 39) 
 
