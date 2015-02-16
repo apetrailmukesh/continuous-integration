@@ -221,3 +221,21 @@ Now, It (should) have `PhantomJS` properly on your system.
     # WebdriverIO listens on port 4444
     phantomjs --webdriver=4444
 
+#### 40) Install [`webdriverCSS`](https://github.com/webdriverio/webdrivercss)
+
+    sudo apt-get install graphicsmagick
+    sudo apt-get install libcairo2-dev
+    // install WebdriverCSS via NPM as usual
+    npm install webdrivercss
+
+#### 41) Install [`Mocha`](http://mochajs.org/)
+
+    npm install mocha -g 
+
+#### 42) Install ['Gulp'](http://gulpjs.com)
+
+    npm install gulp -g
+
+#### 43) Install ['Browserify'](http://browserify.org/)
+
+    npm install browserify -g
