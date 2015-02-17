@@ -239,3 +239,30 @@ Now, It (should) have `PhantomJS` properly on your system.
 #### 43) Install ['Browserify'](http://browserify.org/)
 
     npm install browserify -g
+
+#### 44) Install `virtual box`
+
+Update `Ubuntu`
+
+        sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove
+
+Install required kernel-headers and kernel packages
+
+    sudo apt-get install build-essential dkms
+
+Create a separate `VirtualBox` repository file in `Ubuntu`.
+
+    sudo nano /etc/apt/sources.list.d/virtualbox.list
+
+Copy and paste the below line in the file and save it.
+
+    deb http://download.virtualbox.org/virtualbox/debian trusty contrib
+
+Download the repository key and install
+
+    wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+
+Install `VirtualBox`
+
+    sudo apt-get update && sudo apt-get install VirtualBox-4.3
+
