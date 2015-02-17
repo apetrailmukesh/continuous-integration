@@ -290,4 +290,62 @@ If it’s not correctly installed:
 
     sudo /etc/init.d/vboxdrv setup
 
-#### 48) 
+#### 48) Installing `phpVirtualBox` dependencies - `Apache2`, `PHP` and `PHP Modules`
+
+    sudo apt-get install apache2 php5 php5-common php-soap php5-gd
+
+#### 49) Install `zip`
+
+    apt-get install zip
+
+#### 50) Installing `phpVirtualBox` in `Ubuntu 14.04`
+
+Download phpVirtualBox 
+
+    cd /tmp/ &&  wget http://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-4.3-1.zip
+    
+
+Unzip the package 
+
+    unzip phpvirtualbox*.zip
+
+Create a root directory for `phpVirtualBox`
+
+    sudo mv phpvirtualbox-4.3-1 /var/www/html/phpvirtualbox
+
+Copy the sample config file and rename it by running the commands below
+
+    sudo cp /var/www/html/phpvirtualbox/config.php-example /var/www/html/phpvirtualbox/config.php
+
+Edit the configuration and add the user account and password you created earlier
+
+    sudo nano /var/www/html/phpvirtualbox/config.php
+
+    var $username = 'richard';
+    var $password = 'my_password';
+
+Create a new `VirtualBox` file and enter the info for the user
+
+    sudo nano /etc/default/virtualbox
+
+Then enter the info for the user and save the file.
+
+    VBOXWEB_USER=YourName
+
+Start `VirtualBox` web service
+
+    sudo /etc/init.d/vboxweb-service start
+
+__NOTE__: if you get `Starting VirtualBox web service …fail!`, execute lines below: 
+
+    mkdir /home/YourName/
+    mkdir /home/YourName/.VirtualBox
+    chown YourName:vboxusers /home/YourName/.VirtualBox
+
+Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page: 
+
+    login: admin
+    password: admin
+
+#### 51) Installing Vagrant
+
