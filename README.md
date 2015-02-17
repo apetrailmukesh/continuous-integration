@@ -347,5 +347,9 @@ Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page:
     login: admin
     password: admin
 
-#### 51) Installing Vagrant
+#### 51) Install Vagrant
+
+    mkdir /home/vagrant && cd /home/vagrant
+    wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb 
+    dpkg -i vagrant_1.7.2_x86_64.deb
 
