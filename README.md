@@ -266,3 +266,28 @@ Install `VirtualBox`
 
     sudo apt-get update && sudo apt-get install VirtualBox-4.3
 
+#### 45) Install `VirtualBox` extension pack
+
+    cd /tmp/ &&  wget http://download.virtualbox.org/virtualbox/4.3.12/Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack
+
+Install the extension pack
+
+    sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack
+
+#### 46) Create `user` for `VirtualBox`
+
+    sudo useradd YourName
+    sudo passwd YourName
+    sudo usermod -aG vboxusers YourName
+
+#### 47) Check if `VirtualBox` was correctly installed 
+
+    sudo /etc/init.d/vboxdrv status
+    // outputs
+    // VirtualBox kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) are loaded.
+
+If it’s not correctly installed:
+
+    sudo /etc/init.d/vboxdrv setup
+
+#### 48) 
