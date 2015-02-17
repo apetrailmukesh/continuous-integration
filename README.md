@@ -355,8 +355,22 @@ Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page:
 
 #### 52) Install SauceLabs
 
+Add `sauceLabs` credentials to `client`'s host configuration
 
-
+    var client = webdriverio.remote({
+            desiredCapabilities: {
+                browserName: 'internet explorer',
+                version: '8',
+                platform: 'XP',
+                tags: ['IE'],
+                name: 'Basic test',
+            },
+            host: 'ondemand.saucelabs.com',
+               port: 80,
+               user: sauceLabs.user,
+               key: sauceLabs.key,
+               logLevel: 'silent'
+    });
 
 #### Misc 
 
@@ -365,6 +379,11 @@ Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page:
 `Jenkins` `git` location - `${JENKINS_HOME}/jobs/<JOB_NAME>/workspace`
 
 Restart `jenkins` - `sudo service jenkins restart`
+
+#### Notes 
+
+[Webdriver.io multiRemote is not yet implemented](https://github.com/webdriverio/webdriverio/issues/424)
+
 
 
 
