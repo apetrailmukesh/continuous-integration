@@ -353,3 +353,6 @@ Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page:
     wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb 
     dpkg -i vagrant_1.7.2_x86_64.deb
 
+#### 52) Install SauceLabs
+
+ 
