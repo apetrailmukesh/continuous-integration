@@ -355,4 +355,17 @@ Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page:
 
 #### 52) Install SauceLabs
 
+
+
+
+#### Misc 
+
+`Jenkins` home directory - `$JENKINS_HOME` - `/var/lib/jenkins`
+
+`Jenkins` `git` location - `${JENKINS_HOME}/jobs/<JOB_NAME>/workspace`
+
+
+
+
+
  
