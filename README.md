@@ -364,6 +364,8 @@ Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page:
 
 `Jenkins` `git` location - `${JENKINS_HOME}/jobs/<JOB_NAME>/workspace`
 
+Restart `jenkins` - `sudo service jenkins restart`
+
 
 
 
