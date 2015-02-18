@@ -277,6 +277,13 @@ In test folder
     chmod 777 node_modules/webdrivercss
     chmod 777 node_modules/webdrivercss/lib
 
+#### 47) Configure production server deployments
+
+Create __staging server__, which checks out `staging` branch and deploys it to __staging server__ . Create __production server__, which checks out `master` and deploys it to __production server__ 
+
+#### 48) 
+
+
 
 
 #### Misc 
