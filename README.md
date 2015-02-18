@@ -240,120 +240,7 @@ Now, It (should) have `PhantomJS` properly on your system.
 
     npm install browserify -g
 
-#### 44) Install `virtual box`
-
-Update `Ubuntu`
-
-        sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove
-
-Install required kernel-headers and kernel packages
-
-    sudo apt-get install build-essential dkms
-
-Create a separate `VirtualBox` repository file in `Ubuntu`.
-
-    sudo nano /etc/apt/sources.list.d/virtualbox.list
-
-Copy and paste the below line in the file and save it.
-
-    deb http://download.virtualbox.org/virtualbox/debian trusty contrib
-
-Download the repository key and install
-
-    wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-
-Install `VirtualBox`
-
-    sudo apt-get update && sudo apt-get install VirtualBox-4.3
-
-#### 45) Install `VirtualBox` extension pack
-
-    cd /tmp/ &&  wget http://download.virtualbox.org/virtualbox/4.3.12/Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack
-
-Install the extension pack
-
-    sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack
-
-#### 46) Create `user` for `VirtualBox`
-
-    sudo useradd YourName
-    sudo passwd YourName
-    sudo usermod -aG vboxusers YourName
-
-#### 47) Check if `VirtualBox` was correctly installed 
-
-    sudo /etc/init.d/vboxdrv status
-    // outputs
-    // VirtualBox kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) are loaded.
-
-If it’s not correctly installed:
-
-    sudo /etc/init.d/vboxdrv setup
-
-#### 48) Installing `phpVirtualBox` dependencies - `Apache2`, `PHP` and `PHP Modules`
-
-    sudo apt-get install apache2 php5 php5-common php-soap php5-gd
-
-#### 49) Install `zip`
-
-    apt-get install zip
-
-#### 50) Installing `phpVirtualBox` in `Ubuntu 14.04`
-
-Download phpVirtualBox 
-
-    cd /tmp/ &&  wget http://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-4.3-1.zip
-    
-
-Unzip the package 
-
-    unzip phpvirtualbox*.zip
-
-Create a root directory for `phpVirtualBox`
-
-    sudo mv phpvirtualbox-4.3-1 /var/www/html/phpvirtualbox
-
-Copy the sample config file and rename it by running the commands below
-
-    sudo cp /var/www/html/phpvirtualbox/config.php-example /var/www/html/phpvirtualbox/config.php
-
-Edit the configuration and add the user account and password you created earlier
-
-    sudo nano /var/www/html/phpvirtualbox/config.php
-
-    var $username = 'richard';
-    var $password = 'my_password';
-
-Create a new `VirtualBox` file and enter the info for the user
-
-    sudo nano /etc/default/virtualbox
-
-Then enter the info for the user and save the file.
-
-    VBOXWEB_USER=YourName
-
-Start `VirtualBox` web service
-
-    sudo /etc/init.d/vboxweb-service start
-
-__NOTE__: if you get `Starting VirtualBox web service …fail!`, execute lines below: 
-
-    mkdir /home/YourName/
-    mkdir /home/YourName/.VirtualBox
-    chown YourName:vboxusers /home/YourName/.VirtualBox
-
-Now open `droplet.ip/phpvirtualbox/` and you will be prompted to a login page: 
-
-    login: admin
-    password: admin
-
-#### 51) Install Vagrant
-
-    mkdir /home/vagrant && cd /home/vagrant
-    wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb 
-    dpkg -i vagrant_1.7.2_x86_64.deb
-
-#### 52) Install SauceLabs
+#### 44) Install SauceLabs
 
 Add `sauceLabs` credentials to `client`'s host configuration
 
@@ -371,6 +258,13 @@ Add `sauceLabs` credentials to `client`'s host configuration
                key: sauceLabs.key,
                logLevel: 'silent'
     });
+
+#### 45) Create staging server 
+
+* Install `git` 
+* Install `zsh`
+* Add staging branch to production repo
+* Set up `springloops` for autodeployment  
 
 #### Misc 
 
