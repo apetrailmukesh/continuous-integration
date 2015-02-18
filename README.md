@@ -281,7 +281,13 @@ In test folder
 
 Create __staging server__, which checks out `staging` branch and deploys it to __staging server__ . Create __production server__, which checks out `master` and deploys it to __production server__ 
 
-#### 48) 
+#### 48) Config Jenkins `git plugin`
+
+Configure system => Git plugin
+
+And add `user.name` and `user.email` values
+
+#### 49) 
 
 
 
