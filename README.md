@@ -261,10 +261,23 @@ Add `sauceLabs` credentials to `client`'s host configuration
 
 #### 45) Create staging server 
 
-* Install `git` 
 * Install `zsh`
+* Install `git` 
 * Add staging branch to production repo
 * Set up `springloops` for autodeployment  
+* Create `staging` branch out of `master` and push it to `origin`
+
+#### 46) Fix permissions for `webdiverCSS`
+
+In test folder 
+    
+    // Add permissions to folders were webdrivercss writes     
+    chmod 777 src/screenshots
+    chmod 777 build/screenshot-diffs
+    chmod 777 node_modules/webdrivercss
+    chmod 777 node_modules/webdrivercss/lib
+
+
 
 #### Misc 
 
