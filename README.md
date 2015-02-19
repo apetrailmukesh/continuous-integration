@@ -281,13 +281,19 @@ In test folder
 
 Create __staging server__, which checks out `staging` branch and deploys it to __staging server__ . Create __production server__, which checks out `master` and deploys it to __production server__ 
 
-#### 48) Config Jenkins `git plugin`
+#### 48) Config Jenkins `git plugin` from jenkins admin page
 
 Configure system => Git plugin
 
 And add `user.name` and `user.email` values
 
-#### 49) 
+#### 49) Install [`Tap`](https://wiki.jenkins-ci.org/display/JENKINS/TAP+Plugin) plugin for `Jenkins`
+
+#### 50) Install `testem`
+
+
+
+
 
 
 
@@ -313,6 +319,7 @@ __e2e testing__ - or __end-to-end__ or __UI testing__ is a methodology used to t
 __Unit testing__ - is a practice of testing certain functions and areas – or units – of our code. This gives us the ability to verify that functions work as expected. For a function and given a set of inputs, we can determine if the function is returning the proper values and will gracefully handle failures during the course of execution should invalid input be provided.
 
 Ultimately, this helps us to identify failures in our algorithms and/or logic to help improve the quality of the code that composes a certain function.
+
 
 
 
