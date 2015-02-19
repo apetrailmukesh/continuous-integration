@@ -289,6 +289,12 @@ And add `user.name` and `user.email` values
 
 #### 49) Install [`Tap`](https://wiki.jenkins-ci.org/display/JENKINS/TAP+Plugin) plugin for `Jenkins`
 
+Add Execute shell command. In the "Command" text area, paste this code
+
+    testem ci > tests.tap
+
+Under "Post-build Actions", check "Publish TAP Results", then in "Test results" put `tests.tap`.
+
 #### 50) Install `testem`
 
 
