@@ -295,7 +295,11 @@ Add Execute shell command. In the "Command" text area, paste this code
 
 Under "Post-build Actions", check "Publish TAP Results", then in "Test results" put `tests.tap`.
 
-#### 50) Install `testem`
+#### 50) Install `mocha-jenkins-reporter`
+
+    npm install -g mocha-jenkins-reporter --save-dev  
+
+#### 51) Install `testem`
 
 
 
