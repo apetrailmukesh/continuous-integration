@@ -301,14 +301,39 @@ Under "Post-build Actions", check "Publish TAP Results", then in "Test results" 
 
 In `jenkins` edit `mocha` command and add `-R tap` flag
 
-#### 51) Install `testem`
+#### 51) Install `testem` on CI SERVER
 
+    npm install testem -g
 
+In  `/tests` folder create `testem.yml`
 
+In this file we will specify testing framework we are using - `mocha`.
 
+`Launchers` - in our case our launcher is `node`, which uses `tap` protocol([Test Anything Protocol](https://testanything.org/)) for executing our `mocha` test with `-R tap` flag. 
 
+Because we are using `browserify` for test suites we need to specify all source file in `src_files`. 
 
+    framework: mocha
+    launchers:
+        Node:
+            command: mocha src/tests/test.js -R tap
+            protocol: tap
+    launch_in_dev: [Node]
+    launch_in_ci: [Node]
+    src_files:
+        - src/tests/*.js
 
+#### 52) Install `TAP Plugin` in Jenkins
+
+#### 53) Configure Jenkins job make TAP reports 
+
+Create execute shell step, which will run `testem ci` and output config reports to ` $WORKSPACE/tests.tap`.
+
+    cd /home/tests && testem ci > $WORKSPACE/tests.tap
+
+Add __Publish TAP Results__ from Post-build Actions with
+
+    *.tap
 
 #### Misc 
 
