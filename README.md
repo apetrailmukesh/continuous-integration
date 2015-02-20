@@ -299,6 +299,8 @@ Under "Post-build Actions", check "Publish TAP Results", then in "Test results" 
 
     npm install -g mocha-jenkins-reporter --save-dev  
 
+In `jenkins` edit `mocha` command and add `-R tap` flag
+
 #### 51) Install `testem`
 
 
