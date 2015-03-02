@@ -173,6 +173,12 @@ Add __Authentication Token__
     curl -X POST http://droplet.ip:8080/job/production/build?token=TOKEN_NAME
     echo "pre-push finished"
 
+You might need to change oermissions for the git hook file
+
+	chmod 777 .git/hooks/pre-push
+
+
+
 #### 37) Install `webdriver.io`
 
     npm install webdriverio -g
@@ -356,9 +362,3 @@ __e2e testing__ - or __end-to-end__ or __UI testing__ is a methodology used to t
 __Unit testing__ - is a practice of testing certain functions and areas – or units – of our code. This gives us the ability to verify that functions work as expected. For a function and given a set of inputs, we can determine if the function is returning the proper values and will gracefully handle failures during the course of execution should invalid input be provided.
 
 Ultimately, this helps us to identify failures in our algorithms and/or logic to help improve the quality of the code that composes a certain function.
-
-
-
-
-
- 
