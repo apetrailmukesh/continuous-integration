@@ -1,4 +1,4 @@
-#### 1) Create droplet 
+#### 1) Create droplet
 
 #### 2) SSH into ip.droplet
 
@@ -340,6 +340,13 @@ Create execute shell step, which will run `testem ci` and output config reports 
 Add __Publish TAP Results__ from Post-build Actions with
 
     *.tap
+
+#### 54) Edit internal hosts files 
+
+	nano /etc/hosts
+	111.111.111.111 staging.website.com www.staging.website.com
+
+Use your ip address and preferred domain name
 
 #### Misc 
 
