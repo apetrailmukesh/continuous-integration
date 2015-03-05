@@ -370,6 +370,8 @@ Open `/etc/nginx/conf.d/website.com` and add the following lines:
 
 Restart `jenkins` - `sudo service jenkins restart`
 
+`Jenkins Workspace` - `/var/lib/jenkins/jobs/job-name/workspace`
+
 #### Notes 
 
 [Webdriver.io multiRemote is not yet implemented](https://github.com/webdriverio/webdriverio/issues/424)
