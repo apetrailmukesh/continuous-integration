@@ -359,8 +359,11 @@ Open `/etc/nginx/conf.d/website.com` and add the following lines:
     allow 182.151.183.010;
     allow 164.203.111.234;
     allow 152.123.203.046;
+    allow 162.222.72.0/21; # Range of Sauce On Demand ip addresses (162.222.72.1 – 162.222.79.254) 
     deny all;
   }
+
+
 
 #### Misc 
 
