@@ -341,12 +341,26 @@ Add __Publish TAP Results__ from Post-build Actions with
 
     *.tap
 
-#### 54) Edit internal hosts files 
+#### 54) Setup remote staging & production server 
 
-	nano /etc/hosts
-	111.111.111.111 staging.website.com www.staging.website.com
+Check you my other notes on installing CentOS
 
-Use your ip address and preferred domain name
+#### 55) Block web access to you servers
+
+We need to block web access to our staging and production servers,
+for being not indexable for search engines. 
+
+Open `/etc/nginx/conf.d/website.com` and add the following lines:
+
+  location / {
+    try_files $uri $uri/ /index.php?$args;
+
+    # List of allowed IP addresses
+    allow 182.151.183.010;
+    allow 164.203.111.234;
+    allow 152.123.203.046;
+    deny all;
+  }
 
 #### Misc 
 
